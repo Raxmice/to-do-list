@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body  class="homep">
+    <section>
+    <h1><span class="appname">Important</span></h1>
+    <form action="imp" method="post">
+    <div class="data"><input type="text" class="imp-note" name="impnote" placeholder="+ Type Here.....">
+    <button class="add" name="btnadd">Add</button>
+    </div>
+    </form>
+    <div class="print">
+        <% for (var i=0; i<note.length; i++){ %> <!--just becouse fname is an array so it will give us a length of array-->
+            <% if(note !== ""){ %>
+            <h4>[<%= [i+1] %>]  <%= note[i] %></h4>
+            <% }} %>
+    </div>
+</section>
+<footer>
+    <a href="/">Back to Home</a><br>Raxmice @ 2022
+</footer>
+</body>
+</html>

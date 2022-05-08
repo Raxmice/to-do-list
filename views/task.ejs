@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body  class="homep">
+    <section>
+    <h1><span class="appname">Task List</span></h1>
+    <div class="print">
+        <% var num=task.length+1; %>
+        <% box.push("mark"+num); %>
+        <% val.push("val"+num); %>
+        <% lab.push("lab"+num); %>
+        <% fun.push(num); %>
+        <% for (var i=0; i<task.length; i++){ %> <!--just becouse fname is an array so it will give us a length of array-->
+            <% if(task !== ""){ %>
+                <% var name = box[i]; %>
+                <% var value = val[i]; %>
+                <% var label = lab[i]; %>
+                <% var func = fun[i]; %>
+                <input type="checkbox" id="mark" class="markd" name="<%= name %>" value="<%= value %>" onclick="check(<%= func %>)">
+                <label style="font-weight: bold;" for="" class="<%= label %>"><%= task[i] %></label><br>
+                <% }} %>  
+
+    </div>
+    <form action="task" method="post">
+    <div class="data"><input type="text" class="imp-note" name="task" placeholder="+ Type Your Task Here.....">
+    <button class="add" name="btnadd" onclick="check()">Add</button>
+    </div>
+    </form>
+</section>
+<footer>
+    <a href="/">Back to Home</a><br>Raxmice @ 2022
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
